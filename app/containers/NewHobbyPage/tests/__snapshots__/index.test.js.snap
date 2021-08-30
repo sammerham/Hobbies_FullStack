@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewHobbyPage /> should render and match the snapshot 1`] = `
+<div>
+  <h1
+    class="styledComponents__StyledTitle-by26az-0 cqdktE"
+  >
+    New Hobby
+  </h1>
+  <form
+    class="styledComponents__StyledForm-by26az-4 lcZgNs"
+  >
+    <input
+      aria-label="hobby"
+      id="hobby"
+      name="hobby"
+      placeholder="Enter a new hobby"
+      required=""
+      value=""
+    />
+    <button
+      class="styledComponents__StyledButton-by26az-1 iyphPq"
+    >
+      Add
+    </button>
+  </form>
+</div>
+`;
