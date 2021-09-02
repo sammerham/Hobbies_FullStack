@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 // import { v4 as uuidv4 } from 'uuid';
 import { useHistory } from 'react-router-dom';
-import { ADD_HOBBY } from '../../constants/constants';
-import {
-  StyledTitle,
-  StyledButton,
-  StyledForm,
-} from '../../styledComponents/styledComponents';
+import { addHobby } from './actions';
+// import { StyledTitle, StyledButton, StyledForm } from './styledComponents';
+import { StyledButton } from '../../components/Button';
+import { StyledTitle } from '../../components/H1';
+import { StyledForm } from '../../components/Form';
 
 /*
  * NewHobbyPage
@@ -26,7 +25,7 @@ export default function NewHobbyPage() {
   function handleSubmit(evt) {
     evt.preventDefault();
     // dispatch({ type: ADD_HOBBY, hobby: formData.hobby, id: uuidv4() });
-    dispatch({ type: ADD_HOBBY, hobby: formData.hobby });
+    dispatch(addHobby(formData.hobby));
     setFormData({ hobby: '' });
     history.push('/');
   }

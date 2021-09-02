@@ -1,9 +1,4 @@
-import {
-  GET_HOBBIES_ASYNC,
-  ADD_HOBBY_ASYNC,
-  GET_REQUEST_FAILED,
-  ADD_REQUEST_FAILED,
-} from './constants/constants';
+import { GET_HOBBIES_ASYNC, GET_REQUEST_FAILED } from './constants';
 
 const DEFAULT_STATE = {
   hobbies: [],
@@ -15,10 +10,6 @@ export default function hobbiesReducer(state = DEFAULT_STATE, action) {
     case GET_HOBBIES_ASYNC:
       return { hobbies: action.hobbies };
     case GET_REQUEST_FAILED:
-      return { error: action.error };
-    case ADD_HOBBY_ASYNC:
-      return { hobbies: action.hobbies };
-    case ADD_REQUEST_FAILED:
       return { error: action.error };
     default:
       return state;

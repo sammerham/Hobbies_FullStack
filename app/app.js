@@ -32,7 +32,7 @@ import configureStore from './configureStore';
 
 // Import i18n messages
 import { translationMessages } from './i18n';
-import rootSaga from './sagas/sagas';
+import rootSaga from './sagas';
 
 // Create redux store with history
 const initialState = {};

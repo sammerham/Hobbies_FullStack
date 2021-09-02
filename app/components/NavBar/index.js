@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  StyledNavBar,
-  StyledLink,
-} from '../../styledComponents/styledComponents';
+import { StyledNavBar, StyledLink } from './styledComponents';
 
 /*
  * NavBar

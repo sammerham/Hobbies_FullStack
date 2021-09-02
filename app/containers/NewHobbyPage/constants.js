@@ -1,0 +1,3 @@
+export const ADD_HOBBY_ASYNC = 'ADD_HOBBY_ASYNC';
+export const ADD_HOBBY = 'ADD_HOBBY';
+export const ADD_REQUEST_FAILED = 'ADD_REQUEST_FAILED';

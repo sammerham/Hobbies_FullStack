@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { hobbySelector } from '../../selectors';
-import { GET_HOBBIES } from '../../constants/constants';
-import { StyledParag } from '../../styledComponents/styledComponents';
+import { hobbySelector, errorSelector } from './selectors';
+import { getHobbies } from './actions';
+import { StyledParag } from '../../components/Paragraph';
+import ListItem from '../../components/ListItem';
 /*
  * HomePage
  *
@@ -16,18 +17,25 @@ import { StyledParag } from '../../styledComponents/styledComponents';
 export default function HomePage() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch({ type: GET_HOBBIES });
+    dispatch(getHobbies());
   }, []);
   const hobbies = useSelector(hobbySelector);
-  return hobbies.length ? (
-    hobbies.map(hobby => (
+  const error = useSelector(errorSelector);
+
+  if (error) {
+    return <ListItem item="Something went wrong, please try again!" />;
+  }
+  if (hobbies.length === 0) {
+    return <ListItem item="Hobby List is empty, enter your hobby" />;
+  }
+  if (hobbies.length) {
+    return hobbies.map(hobby => (
       // <StyledParag key={hobby.id} >
       <StyledParag key={uuidv4()}>
         {/* {hobby.hobby} */}
         {hobby}
       </StyledParag>
-    ))
-  ) : (
-    <FontAwesomeIcon icon={faSpinner} spin />
-  );
+    ));
+  }
+  return <FontAwesomeIcon icon={faSpinner} spin />;
 }

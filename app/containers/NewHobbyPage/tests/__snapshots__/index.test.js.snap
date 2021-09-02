@@ -3,12 +3,12 @@
 exports[`<NewHobbyPage /> should render and match the snapshot 1`] = `
 <div>
   <h1
-    class="styledComponents__StyledTitle-by26az-0 cqdktE"
+    class="H1__StyledTitle-tncdg6-0 gvCcIQ"
   >
     New Hobby
   </h1>
   <form
-    class="styledComponents__StyledForm-by26az-4 lcZgNs"
+    class="Form__StyledForm-kd3r69-0 gslIqp"
   >
     <input
       aria-label="hobby"
@@ -19,7 +19,7 @@ exports[`<NewHobbyPage /> should render and match the snapshot 1`] = `
       value=""
     />
     <button
-      class="styledComponents__StyledButton-by26az-1 iyphPq"
+      class="Button__StyledButton-sc-1fkoyq4-0 fWJPNy"
     >
       Add
     </button>

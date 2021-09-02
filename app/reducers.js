@@ -7,7 +7,8 @@ import { connectRouter } from 'connected-react-router';
 
 import history from 'utils/history';
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
-import hobbiesReducer from './reducer';
+import hobbiesReducer from './containers/HomePage/reducer';
+import addHobbyReducer from './containers/NewHobbyPage/reducer';
 
 /**
  * Merges the main reducer with the router state and dynamically injected reducers
@@ -17,6 +18,7 @@ export default function createReducer() {
     language: languageProviderReducer,
     router: connectRouter(history),
     hobbies: hobbiesReducer,
+    addHobby: addHobbyReducer,
   });
   return rootReducer;
 }
