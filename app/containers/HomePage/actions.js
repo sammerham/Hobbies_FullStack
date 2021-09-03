@@ -1,6 +1,6 @@
 /*
  *
- * NewHobbyPage actions
+ * HomePage actions
  *
  */
 

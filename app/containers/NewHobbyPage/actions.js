@@ -5,7 +5,7 @@
  */
 
 import { ADD_HOBBY, ADD_HOBBY_ASYNC, ADD_REQUEST_FAILED } from './constants';
-// dispatched when hobby added
+
 export function addHobby(hobby) {
   return {
     type: ADD_HOBBY,
