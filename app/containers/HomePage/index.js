@@ -30,11 +30,7 @@ export default function HomePage() {
   }
   if (hobbies.length) {
     return hobbies.map(hobby => (
-      // <StyledParag key={hobby.id} >
-      <StyledParag key={uuidv4()}>
-        {/* {hobby.hobby} */}
-        {hobby}
-      </StyledParag>
+      <StyledParag key={uuidv4()}>{hobby}</StyledParag>
     ));
   }
   return <FontAwesomeIcon icon={faSpinner} spin />;

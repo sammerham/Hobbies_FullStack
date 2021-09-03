@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { v4 as uuidv4 } from 'uuid';
 import { useHistory } from 'react-router-dom';
 import { addHobby } from './actions';
-// import { StyledTitle, StyledButton, StyledForm } from './styledComponents';
 import { StyledButton } from '../../components/Button';
 import { StyledTitle } from '../../components/H1';
 import { StyledForm } from '../../components/Form';
@@ -24,7 +22,6 @@ export default function NewHobbyPage() {
   // handles submit and redirects to homepage on success
   function handleSubmit(evt) {
     evt.preventDefault();
-    // dispatch({ type: ADD_HOBBY, hobby: formData.hobby, id: uuidv4() });
     dispatch(addHobby(formData.hobby));
     setFormData({ hobby: '' });
     history.push('/');

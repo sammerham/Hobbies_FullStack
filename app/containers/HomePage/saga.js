@@ -21,7 +21,6 @@ function* getHobbiessAsync() {
   }
    */
   try {
-    // const hobbies = yield getHHobbies();
     const result = yield call(axios.get, '/api');
     const { hobbies } = result.data;
 

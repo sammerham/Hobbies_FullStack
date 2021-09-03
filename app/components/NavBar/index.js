@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyledNavBar, StyledLink } from './styledComponents';
+import { StyledNavBar } from '../Nav/index';
+import { StyledLink } from '../Link/index';
 
 /*
  * NavBar

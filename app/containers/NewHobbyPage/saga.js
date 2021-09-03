@@ -26,7 +26,6 @@ function* addHobbiessAsync(action) {
     });
     const { hobbies } = result.data;
     // dispatches ADD_HOBBY_ASYNC action to the store with hobbies
-    // yield put({ type: ADD_HOBBY_ASYNC, hobbies });
     yield put(addHobbyAsync(hobbies));
   } catch (error) {
     // dispatches ADD_REQUEST_FAILED action to the store with the error
