@@ -16,7 +16,6 @@ export function getHobbies() {
   };
 }
 
-
 export function getHobiesAsync(hobbies) {
   return {
     type: GET_HOBBIES_ASYNC,
