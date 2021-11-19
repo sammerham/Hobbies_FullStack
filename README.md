@@ -1,5 +1,5 @@
 **Hoobies Application:**
-FullStack App - made with react-boiler-plate
+##FullStack App - made with react-boiler-plate
 **This application’s Server:**
                                                                         
 Utilizes a Node / Express server.
