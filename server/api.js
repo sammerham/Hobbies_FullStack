@@ -16,7 +16,7 @@ const router = new express.Router();
 */
 router.get('/', async (req, res) => res.json({ hobbies: ININITAL_HOBBIES }));
 
-/** POSTs new hobby to prepend to hobbies 
+/** POSTs new hobby to append to hobbies 
  *  POST 
 	{"hobby":"swimming"}  ------>>>> 
   {
@@ -33,7 +33,7 @@ router.get('/', async (req, res) => res.json({ hobbies: ININITAL_HOBBIES }));
 router.post('/', async (req, res) => {
   const { hobby } = req.body;
   if (!hobby) throw new Error('Hobby must not be empty');
-  ININITAL_HOBBIES.unshift(hobby);
+  ININITAL_HOBBIES.push(hobby);
   return res.json({ hobbies: ININITAL_HOBBIES });
 });
 

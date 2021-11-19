@@ -7,8 +7,8 @@ import { routerMiddleware } from 'connected-react-router';
 import createSagaMiddleware from 'redux-saga';
 import createReducer from './reducers';
 
-import hobbiesReducer from './containers/HomePage/reducer';
-import addHobbyReducer from './containers/NewHobbyPage/reducer';
+// import hobbiesReducer from './containers/HomePage/reducer';
+// import addHobbyReducer from './containers/NewHobbyPage/reducer';
 
 export default function configureStore(initialState = {}, history) {
   let composeEnhancers = compose;
@@ -40,7 +40,8 @@ export default function configureStore(initialState = {}, history) {
   const enhancers = [applyMiddleware(...middlewares)];
 
   const store = createStore(
-    createReducer([hobbiesReducer, addHobbyReducer]),
+    // createReducer([hobbiesReducer, addHobbyReducer]),
+    createReducer(),
     initialState,
     composeEnhancers(...enhancers),
   );

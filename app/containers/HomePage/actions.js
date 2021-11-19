@@ -9,7 +9,9 @@ import {
   GET_HOBBIES_ASYNC,
   GET_REQUEST_FAILED,
 } from './constants';
+
 // dispatched when hobby added
+
 export function getHobbies() {
   return {
     type: GET_HOBBIES,

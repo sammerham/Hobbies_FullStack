@@ -21,6 +21,7 @@ function* addHobbiessAsync(action) {
 }
 */
   try {
+    // calls api to post a hobby to hobbies
     const result = yield call(axios.post, '/api', {
       hobby: action.hobby,
     });
@@ -33,7 +34,7 @@ function* addHobbiessAsync(action) {
   }
 }
 
-// watcher saga: watches for ADD_HOBBYaction dispatched to the store, starts worker saga
+// watcher saga: watches for ADD_HOBBY action dispatched to the store, starts worker saga
 export function* watchAddHobbiesAsync() {
   yield takeEvery(ADD_HOBBY, addHobbiessAsync);
 }
