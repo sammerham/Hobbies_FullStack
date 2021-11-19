@@ -1,5 +1,5 @@
-**Hoobies Application:**
-##FullStack App - made with react-boiler-plate
+**Hoobies FullStack Application:**
+
 **This application’s Server:**
                                                                         
 Utilizes a Node / Express server.
